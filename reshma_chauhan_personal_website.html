@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f5f7">
+<meta name="description" content="Reshma Chauhan — Product Manager building B2B SaaS products through user insight, AI, data, and thoughtful execution.">
+<title>Reshma Chauhan — Product Manager</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --surface: rgba(255,255,255,.78);
+    --white: #fff;
+    --ink: #1d1d1f;
+    --muted: #6e6e73;
+    --blue: #06c;
+    --line: rgba(29,29,31,.10);
+    --radius: 28px;
+    --shadow: 0 18px 50px rgba(0,0,0,.055);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+      "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -.025em; line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  .nav-wrap {
+    position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(180%) blur(22px);
+    -webkit-backdrop-filter: saturate(180%) blur(22px);
+    background: rgba(245,245,247,.82); border-bottom: 1px solid rgba(0,0,0,.06);
+  }
+  nav {
+    max-width: 1120px; margin: auto; padding: 0 28px; min-height: 58px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  }
+  .brand { font-size: 15px; font-weight: 650; letter-spacing: -.04em; white-space: nowrap; }
+  .nav-links { display: flex; align-items: center; gap: 25px; color: #424245; font-size: 12px; }
+  .nav-links a:hover, .text-link:hover { color: var(--blue); }
+  .nav-cta { background: var(--ink); color: white !important; padding: 8px 13px; border-radius: 999px; }
+  main { overflow: hidden; }
+  .container { width: min(100% - 48px, 1050px); margin: auto; }
+  .hero { padding: 96px 0 68px; text-align: center; }
+  .eyebrow { color: var(--muted); text-transform: uppercase; font-size: 11px; letter-spacing: .15em; font-weight: 650; }
+  h1 { margin: 15px 0 10px; font-size: clamp(46px, 8.2vw, 88px); line-height: .99; letter-spacing: -.075em; font-weight: 720; }
+  .gradient-text { color: #777; background: linear-gradient(100deg,#1d1d1f 10%,#6e6e73 48%,#0071e3 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-sub { max-width: 720px; margin: 24px auto 0; color: #515154; font-size: clamp(18px, 2.3vw, 25px); line-height: 1.35; letter-spacing: -.04em; }
+  .hero-copy { max-width: 620px; margin: 17px auto 0; color: var(--muted); font-size: 16px; }
+  .actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 19px; border-radius: 999px; font-size: 14px; font-weight: 550; transition: transform .2s, background .2s; }
+  .button:hover { transform: translateY(-2px); }
+  .button.primary { background: var(--blue); color: white; }
+  .button.secondary { color: var(--blue); border: 1px solid rgba(0,102,204,.28); background: rgba(255,255,255,.45); }
+  .hero-art { position: relative; max-width: 900px; height: 270px; margin: 56px auto 0; border-radius: 32px; overflow: hidden; background: radial-gradient(ellipse at 20% 100%,rgba(0,113,227,.42),transparent 38%), radial-gradient(ellipse at 82% 5%,rgba(161,112,255,.42),transparent 38%), linear-gradient(135deg,#e9e9ed,#fdfdff 48%,#e5e8f5); box-shadow: var(--shadow); }
+  .orb { position: absolute; border-radius: 50%; filter: blur(1px); }
+  .orb.one { width: 220px; height: 220px; left: 15%; top: 36px; background: linear-gradient(135deg,rgba(255,255,255,.95),rgba(100,170,255,.18)); box-shadow: inset -18px -18px 42px rgba(0,102,204,.12), 0 25px 60px rgba(0,102,204,.10); }
+  .orb.two { width: 150px; height: 150px; right: 20%; top: 20px; background: linear-gradient(135deg,rgba(255,255,255,.9),rgba(181,157,255,.4)); box-shadow: inset -14px -14px 35px rgba(95,63,185,.13), 0 25px 60px rgba(80,55,180,.10); }
+  .orb.three { width: 85px; height: 85px; right: 37%; bottom: 15px; background: linear-gradient(135deg,#fff,rgba(0,113,227,.18)); box-shadow: 0 15px 40px rgba(0,0,0,.08); }
+  .art-caption { position: absolute; bottom: 19px; left: 0; right: 0; text-align: center; font-size: 12px; color: #62626a; letter-spacing: .02em; }
+  section { padding: 58px 0; }
+  .section-head { margin-bottom: 27px; }
+  .section-head h2 { margin: 5px 0 0; font-size: clamp(30px,4.5vw,48px); letter-spacing: -.06em; line-height: 1.05; }
+  .section-head p { margin: 12px 0 0; color: var(--muted); max-width: 650px; font-size: 16px; }
+  .metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+  .metric { padding: 26px; border-radius: var(--radius); background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,.025); min-height: 145px; }
+  .metric strong { display: block; font-size: clamp(32px,4vw,47px); letter-spacing: -.065em; line-height: 1.1; }
+  .metric span { display: block; margin-top: 10px; color: var(--muted); font-size: 14px; }
+  .about-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
+  .panel { border-radius: var(--radius); background: var(--white); padding: clamp(24px,4vw,38px); box-shadow: 0 4px 20px rgba(0,0,0,.025); }
+  .panel h3 { margin: 0 0 12px; font-size: 24px; letter-spacing: -.05em; }
+  .panel p { color: #515154; margin: 0 0 13px; font-size: 15px; }
+  .panel p:last-child { margin-bottom: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .chip { background: #f5f5f7; color: #454549; border: 1px solid #e9e9ed; border-radius: 999px; padding: 8px 12px; font-size: 12px; }
+  .timeline { display: grid; gap: 14px; }
+  .job { background: var(--white); border-radius: 24px; padding: 24px 26px; display: grid; grid-template-columns: 1fr auto; gap: 18px; box-shadow: 0 4px 20px rgba(0,0,0,.025); }
+  .job h3 { margin: 0; font-size: 21px; letter-spacing: -.045em; }
+  .job .role { color: #424245; font-size: 14px; margin-top: 3px; }
+  .job .dates { color: var(--muted); font-size: 12px; text-align: right; white-space: nowrap; }
+  .job ul { color: #515154; font-size: 14px; padding-left: 18px; margin: 15px 0 0; max-width: 760px; }
+  .job li + li { margin-top: 6px; }
+  .job.current { border: 1px solid rgba(0,102,204,.18); }
+  .job.current .current-tag { display: inline-block; margin-left: 8px; vertical-align: 3px; font-size: 10px; color: #0066cc; background: #eaf3ff; padding: 4px 7px; border-radius: 99px; letter-spacing: 0; }
+  .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .edu { background: var(--white); border-radius: 24px; padding: 24px; }
+  .edu h3 { font-size: 18px; margin: 0 0 7px; letter-spacing: -.04em; }
+  .edu p { margin: 0; color: var(--muted); font-size: 14px; }
+  .certs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .cert { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 12px 15px; font-size: 13px; }
+  .contact { text-align: center; background: #1d1d1f; color: white; border-radius: 32px; padding: clamp(36px,7vw,74px) 24px; }
+  .contact .eyebrow { color: #a1a1a6; }
+  .contact h2 { margin: 10px auto; font-size: clamp(36px,6vw,64px); line-height: 1; letter-spacing: -.07em; max-width: 700px; }
+  .contact p { color: #c5c5ca; margin: 18px auto 0; max-width: 540px; }
+  .contact .button.secondary { color: white; border-color: rgba(255,255,255,.3); background: transparent; }
+  footer { max-width: 1050px; width: min(100% - 48px,1050px); margin: auto; padding: 25px 0 36px; color: var(--muted); display: flex; justify-content: space-between; gap: 15px; font-size: 12px; }
+  .text-link { color: var(--blue); }
+  @media (max-width: 700px) {
+    nav { padding: 0 18px; }
+    .nav-links { gap: 13px; }
+    .nav-links a:not(.nav-cta) { display: none; }
+    .container, footer { width: min(100% - 32px,1050px); }
+    .hero { padding: 68px 0 44px; }
+    .hero-art { height: 210px; margin-top: 38px; border-radius: 24px; }
+    .orb.one { width: 155px; height: 155px; left: 8%; top: 28px; }
+    .orb.two { width: 112px; height: 112px; right: 12%; top: 18px; }
+    .orb.three { width: 62px; height: 62px; right: 34%; bottom: 15px; }
+    section { padding: 42px 0; }
+    .metrics { grid-template-columns: 1fr; gap: 10px; }
+    .metric { min-height: 0; padding: 21px 23px; }
+    .about-grid, .education-grid { grid-template-columns: 1fr; }
+    .job { grid-template-columns: 1fr; padding: 21px; gap: 5px; }
+    .job .dates { text-align: left; white-space: normal; }
+    .job ul { margin-top: 11px; }
+    footer { flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+</style>
+</head>
+<body>
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="#home">Reshma Chauhan</a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#impact">Impact</a><a href="#experience">Experience</a><a href="#education">Education</a>
+      <a class="nav-cta" href="#contact">Let's connect</a>
+    </div>
+  </nav>
+</div>
+<main>
+  <header class="hero container" id="home">
+    <div class="eyebrow">Product Manager · Hyderabad, India</div>
+    <h1>From problem<br><span class="gradient-text">to product.</span></h1>
+    <p class="hero-sub">Building B2B SaaS that delivers — with GenAI, data, and thoughtful product execution.</p>
+    <p class="hero-copy">I turn real user problems into clear product opportunities, then work across teams to bring useful, measurable solutions to life.</p>
+    <div class="actions">
+      <a class="button primary" href="#experience">Explore my experience <span aria-hidden="true">↗</span></a>
+      <a class="button secondary" href="mailto:reshmachauhan7860@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="hero-art" aria-label="Abstract, soft-gradient visual representing ideas becoming products">
+      <div class="orb one"></div><div class="orb two"></div><div class="orb three"></div>
+      <div class="art-caption">Ideas → Insight → Action → Product</div>
+    </div>
+  </header>
+
+  <section id="impact">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">A few outcomes</div>
+        <h2>Good products make<br>an observable difference.</h2>
+        <p>A snapshot of the impact I’ve worked toward across customer support, sales enablement, and operations.</p>
+      </div>
+      <div class="metrics">
+        <article class="metric"><strong>20%</strong><span>Faster customer response through GenAI integration</span></article>
+        <article class="metric"><strong>20%</strong><span>Improvement in sales productivity and forecasting accuracy through dashboards</span></article>
+        <article class="metric"><strong>30%</strong><span>Higher operational efficiency through automation and custom tools</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">About me</div>
+        <h2>Clarity in complexity.</h2>
+      </div>
+      <div class="about-grid">
+        <article class="panel">
+          <h3>How I approach product</h3>
+          <p>I enjoy the full “Ideas → Action → Product” cycle: understanding users, asking sharper questions, and translating business needs into experiences that solve meaningful problems.</p>
+          <p>My work sits at the intersection of product strategy, data, AI, and cross-functional collaboration—with a focus on outcomes rather than features alone.</p>
+        </article>
+        <article class="panel">
+          <h3>Areas I work across</h3>
+          <p>From shaping product direction and documenting requirements to improving workflows and helping teams make decisions with data.</p>
+          <div class="chips">
+            <span class="chip">Software Product Management</span><span class="chip">B2B SaaS</span><span class="chip">GenAI</span><span class="chip">Product Operations</span><span class="chip">CRM</span><span class="chip">Dashboards & analytics</span><span class="chip">Product strategy</span><span class="chip">Design thinking</span><span class="chip">Wireframing</span><span class="chip">Cross-functional teams</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Career</div>
+        <h2>Experience, built over time.</h2>
+        <p>Progressively taking on product ownership, from product marketing and documentation to product management.</p>
+      </div>
+      <div class="timeline">
+        <article class="job current">
+          <div>
+            <h3>RealPage, Inc. <span class="current-tag">Current</span></h3>
+            <div class="role">Product Manager</div>
+          </div>
+          <div class="dates">December 2025 – Present<br>Hyderabad, India</div>
+        </article>
+        <article class="job">
+          <div>
+            <h3>HighRadius</h3><div class="role">Product Manager</div>
+          </div>
+          <div class="dates">September 2025 – December 2025<br>Hyderabad, India</div>
+        </article>
+        <article class="job">
+          <div>
+            <h3>Justdial</h3><div class="role">Product Manager</div>
+            <ul>
+              <li>Translated business needs into Sales, Payments, Projection, and Revenue dashboards.</li>
+              <li>Supported improvements in sales productivity, forecasting accuracy, and revenue growth.</li>
+              <li>Identified growth opportunities and helped implement strategic product initiatives.</li>
+            </ul>
+          </div>
+          <div class="dates">April 2025 – August 2025<br>Noida, India</div>
+        </article>
+        <article class="job">
+          <div>
+            <h3>Justdial</h3><div class="role">Deputy Product Manager</div>
+          </div>
+          <div class="dates">May 2024 – March 2025<br>Noida, India</div>
+        </article>
+        <article class="job">
+          <div>
+            <h3>Justdial</h3><div class="role">Assistant Product Manager</div>
+          </div>
+          <div class="dates">May 2023 – May 2024<br>Noida, India</div>
+        </article>
+        <article class="job">
+          <div>
+            <h3>LS Digital Group</h3><div class="role">Product Specialist</div>
+            <ul>
+              <li>Worked across product marketing and communications, product strategy, and cross-functional collaboration.</li>
+              <li>Contributed to product lifecycle work, case studies, content, design thinking, wireframes, and product documentation.</li>
+            </ul>
+          </div>
+          <div class="dates">September 2021 – May 2023<br>Mumbai, India</div>
+        </article>
+        <article class="job">
+          <div><h3>LS Digital Group</h3><div class="role">Management Trainee</div></div>
+          <div class="dates">March 2021 – August 2021<br>Mumbai, India</div>
+        </article>
+        <article class="job">
+          <div><h3>Guide2Success</h3><div class="role">Sales and Marketing Intern</div></div>
+          <div class="dates">July 2020</div>
+        </article>
+        <article class="job">
+          <div><h3>Vardhan Consulting Engineers</h3><div class="role">Finance Intern</div></div>
+          <div class="dates">May 2020 – June 2020</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Learning</div>
+        <h2>Grounded in business<br>and technology.</h2>
+      </div>
+      <div class="education-grid">
+        <article class="edu">
+          <h3>Jaipuria Institute of Management</h3>
+          <p>Postgraduate Diploma in Management (PGDM)<br>Marketing and Finance · 2019–2021</p>
+        </article>
+        <article class="edu">
+          <h3>Birla Institute of Technology, Mesra</h3>
+          <p>Bachelor’s degree<br>Computer Science · 2015–2018</p>
+        </article>
+      </div>
+      <div class="certs">
+        <div class="cert">Certified Product Manager (CPM)</div>
+        <div class="cert">Power BI Workshop — Certificate of Participation</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact">
+        <div class="eyebrow">Have a good problem to solve?</div>
+        <h2>Let’s make something meaningful.</h2>
+        <p>I’m always happy to connect with people who care about thoughtful products, useful technology, and measurable outcomes.</p>
+        <div class="actions">
+          <a class="button primary" href="mailto:reshmachauhan7860@gmail.com">reshmachauhan7860@gmail.com</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/reshmachauhan08/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <span>© <span id="year">2026</span> Reshma Chauhan</span>
+  <span>Designed with simplicity in mind.</span>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
